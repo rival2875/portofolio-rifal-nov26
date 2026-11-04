@@ -1,0 +1,10 @@
+Taruh file foto kamu di dalam folder "public" ini.
+Contoh:
+- public/foto-hero.png
+- public/foto-about.png
+- public/project-1.png
+
+Lalu di file src/data/portfolioData.js, ganti URL fotonya menjadi:
+- "/foto-hero.png"
+- "/foto-about.png"
+- "/project-1.png"
