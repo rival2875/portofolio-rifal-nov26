@@ -1,12 +1,43 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState, useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { SectionBadge, SparkleRays } from "./Decorations";
+import { gsap, useScrollReveal, useHoverTilt } from "@/lib/animations";
 
 export default function ProjectsSection({ projectsSection }) {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Semua");
+  const sectionRef = useRef(null);
+  const isFirstRender = useRef(true);
+  useScrollReveal(sectionRef);
+  useHoverTilt(sectionRef, "[data-reveal-card]", 6, [activeCategory]);
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        "[data-reveal-card]",
+        { opacity: 0, y: 30, scale: 0.96 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: "power3.out",
+          overwrite: "auto",
+          clearProps: "transform",
+        }
+      );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, [activeCategory]);
 
   const filteredProjects =
-    activeCategory === "All"
+    activeCategory === "Semua"
       ? projectsSection.items
       : projectsSection.items.filter((item) =>
           item.filterCategories
@@ -15,10 +46,16 @@ export default function ProjectsSection({ projectsSection }) {
         );
 
   return (
-    <section id="projects" className="py-20 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="py-20 md:py-24 px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-5xl mx-auto">
-        {/* Header & Category Filter */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div
+          data-reveal
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        >
           <div>
             <SectionBadge text={projectsSection.subtitle} />
             <h2 className="text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight text-white leading-tight">
@@ -30,7 +67,6 @@ export default function ProjectsSection({ projectsSection }) {
             </h2>
           </div>
 
-          {/* Category Filter Pills */}
           <div className="flex flex-wrap gap-2">
             {projectsSection.categories.map((cat) => {
               const isSelected = activeCategory === cat;
@@ -52,15 +88,15 @@ export default function ProjectsSection({ projectsSection }) {
           </div>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group bg-[#140D25] rounded-3xl p-4 sm:p-5 border border-white/10 hover:border-[#A855F7]/50 shadow-lg hover:shadow-2xl hover:shadow-[#9333EA]/15 transition-all duration-300 flex flex-col justify-between"
+              data-reveal
+              data-reveal-card
+              className="group bg-[#140D25] rounded-3xl p-4 sm:p-5 border border-white/10 hover:border-[#A855F7]/50 hover:-translate-y-2 shadow-lg hover:shadow-2xl hover:shadow-[#9333EA]/15 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Image Wrapper */}
                 <a
                   href={project.liveUrl}
                   target="_blank"
@@ -70,14 +106,13 @@ export default function ProjectsSection({ projectsSection }) {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top group-hover:scale-110 group-hover:rotate-1 transition-transform duration-500"
                   />
                   <span className="absolute top-3 left-3 bg-[#150E26]/90 backdrop-blur-sm border border-white/15 text-[#C084FC] text-xs font-bold px-3.5 py-1.5 rounded-full">
                     {project.category}
                   </span>
                 </a>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5 mt-4">
                   {project.tags.map((tag) => (
                     <span
@@ -89,7 +124,6 @@ export default function ProjectsSection({ projectsSection }) {
                   ))}
                 </div>
 
-                {/* Title & Description */}
                 <a
                   href={project.liveUrl}
                   target="_blank"
@@ -103,7 +137,6 @@ export default function ProjectsSection({ projectsSection }) {
                 </p>
               </div>
 
-              {/* Bottom Action Bar */}
               <div className="mt-5 pt-4 border-t border-white/10 flex items-center justify-between">
                 <a
                   href={project.liveUrl}
@@ -111,14 +144,14 @@ export default function ProjectsSection({ projectsSection }) {
                   rel="noreferrer"
                   className="text-xs sm:text-sm font-bold text-white hover:text-[#C084FC] transition-colors"
                 >
-                  View Case Study
+                  Lihat Studi Kasus
                 </a>
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={project.title}
-                  className="w-9 h-9 rounded-full bg-[#9333EA] text-white group-hover:bg-white group-hover:text-[#0B0714] flex items-center justify-center transition-colors shadow-sm"
+                  className="w-9 h-9 rounded-full bg-[#9333EA] text-white group-hover:bg-white group-hover:text-[#0B0714] group-hover:scale-110 group-hover:rotate-45 flex items-center justify-center transition-all duration-300 shadow-sm"
                 >
                   <ArrowUpRight className="w-4 h-4 stroke-[2.5]" />
                 </a>

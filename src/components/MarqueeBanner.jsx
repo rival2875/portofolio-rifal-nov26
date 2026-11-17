@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import { useRef } from "react";
 import { FourPointStar } from "./Decorations";
 
 export default function MarqueeBanner({ items }) {

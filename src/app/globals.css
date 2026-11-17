@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-@layer base {
-  body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-}
-
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -25,15 +18,6 @@
   }
 }
 
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 .animate-marquee {
   display: flex;
   width: max-content;
@@ -48,27 +32,21 @@
   animation: spinSlow 16s linear infinite;
 }
 
-.animate-float-slow {
-  animation: floatSlow 4s ease-in-out infinite;
-}
-
 /* ============================================================================
    LIGHT MODE THEME OVERRIDES (WHITE + PURPLE NUANCE)
    ============================================================================ */
 .light-mode {
-  background-color: #F7F5FF !important;
-  color: #160D2B !important;
+  background-color: #f7f5ff !important;
+  color: #160d2b !important;
 }
 
-/* Main section backgrounds in Light Mode */
 .light-mode #about,
 .light-mode #contact {
-  background-color: #EFEAFF !important;
+  background-color: #efeaff !important;
   border-color: rgba(147, 51, 234, 0.15) !important;
-  color: #160D2B !important;
+  color: #160d2b !important;
 }
 
-/* Headings and general text inside sections in Light Mode */
 .light-mode #home h1,
 .light-mode #services h2,
 .light-mode #about h2,
@@ -77,52 +55,45 @@
 .light-mode #contact h2,
 .light-mode #projects h3,
 .light-mode #achievement h3 {
-  color: #160D2B !important;
+  color: #160d2b !important;
 }
 
-/* Highlighted gradient name in Hero during Light Mode */
 .light-mode #home h1 span.bg-clip-text {
-  background-image: linear-gradient(to right, #7E22CE, #9333EA, #A855F7) !important;
+  background-image: linear-gradient(to right, #7e22ce, #9333ea, #a855f7) !important;
 }
 
-/* Highlighted purple words in section titles during Light Mode */
 .light-mode h2 span.text-\[\#C084FC\],
 .light-mode .text-\[\#C084FC\] {
-  color: #7E22CE !important;
+  color: #7e22ce !important;
 }
 
-/* Paragraphs & subtext in Light Mode */
 .light-mode #home p,
 .light-mode #about p,
 .light-mode #projects p,
 .light-mode #achievement p,
 .light-mode #contact p,
 .light-mode #contact label {
-  color: #4A3E68 !important;
+  color: #4a3e68 !important;
 }
 
-/* Keep stats numbers purple in Light Mode */
 .light-mode #about .grid p:first-child {
-  color: #7E22CE !important;
+  color: #7e22ce !important;
 }
 
-/* Section Badge text & dot in Light Mode */
 .light-mode .inline-flex.items-center.gap-2.mb-2\.5 span.text-gray-200 {
-  color: #2E1C54 !important;
+  color: #2e1c54 !important;
 }
 .light-mode .inline-flex.items-center.gap-2.mb-2\.5 span.bg-white {
-  background-color: #160D2B !important;
+  background-color: #160d2b !important;
 }
 
-/* Sparkle rays stroke in Light Mode */
 .light-mode h1 svg path,
 .light-mode h2 svg path {
-  stroke: #160D2B !important;
+  stroke: #160d2b !important;
 }
 
-/* Hero Portrait Backdrop Ring in Light Mode */
 .light-mode #home .rounded-full.bg-gradient-to-b {
-  background: linear-gradient(to bottom, #E9D5FF, #F3E8FF) !important;
+  background: linear-gradient(to bottom, #e9d5ff, #f3e8ff) !important;
   border-color: rgba(147, 51, 234, 0.35) !important;
 }
 .light-mode #home .rounded-full.border-\[18px\] {
@@ -132,50 +103,45 @@
   background: linear-gradient(to top, rgba(247, 245, 255, 0.9), transparent) !important;
 }
 
-/* Cards in Light Mode (Collapsed Services, Projects, Blogs, Contact Form) */
 .light-mode .bg-\[\#140D25\] {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
   border-color: rgba(147, 51, 234, 0.18) !important;
-  color: #160D2B !important;
+  color: #160d2b !important;
   box-shadow: 0 10px 30px -10px rgba(147, 51, 234, 0.1) !important;
 }
 
 .light-mode #services .bg-\[\#140D25\] h3 {
-  color: #160D2B !important;
+  color: #160d2b !important;
 }
 
 .light-mode #services .bg-\[\#0B0714\] {
-  background-color: #F7F5FF !important;
+  background-color: #f7f5ff !important;
 }
 
-/* Project & Blog links and tags in Light Mode */
 .light-mode #projects .bg-white\/10 {
-  background-color: #F3E8FF !important;
-  color: #6B21A8 !important;
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
 }
 
 .light-mode #projects a.text-white,
 .light-mode #achievement a.text-white {
-  color: #160D2B !important;
+  color: #160d2b !important;
 }
 
-/* Contact inputs in Light Mode */
 .light-mode #contact input,
 .light-mode #contact select,
 .light-mode #contact textarea {
-  background-color: #F8F6FF !important;
+  background-color: #f8f6ff !important;
   border-color: rgba(147, 51, 234, 0.25) !important;
-  color: #160D2B !important;
+  color: #160d2b !important;
 }
 
-/* About Frame cutouts in Light Mode */
 .light-mode #about .rotate-45.bg-\[\#080510\] {
-  background-color: #EFEAFF !important;
+  background-color: #efeaff !important;
 }
 
-/* Footer brand text in Light Mode */
 .light-mode footer .text-base.font-extrabold.text-white,
 .light-mode #contact a p.text-white,
 .light-mode #contact div p.text-white {
-  color: #160D2B !important;
+  color: #160d2b !important;
 }

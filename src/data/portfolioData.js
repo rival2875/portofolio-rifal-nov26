@@ -1,5 +1,5 @@
 // ============================================================================
-// RIFALDI VALOZA PORTFOLIO DATA (ENGLISH VERSION — BASED ON CV)
+// DATA PORTOFOLIO RIFALDI VALOZA (VERSI BAHASA INDONESIA — BERDASARKAN CV)
 // ============================================================================
 
 export const portfolioData = {
@@ -7,41 +7,23 @@ export const portfolioData = {
   brand: {
     name: "Rifaldi Valoza",
     dot: ".",
-    ctaText: "Light Mode",
-    ctaHref: "#contact",
     navLinks: [
-      { label: "Home", href: "#home" },
-      { label: "Services", href: "#services" },
-      { label: "Projects", href: "#projects" },
-      { label: "Achievement", href: "#achievement" },
-      { label: "About Me", href: "#about" },
+      { label: "Beranda", href: "#home" },
+      { label: "Layanan", href: "#services" },
+      { label: "Proyek", href: "#projects" },
+      { label: "Prestasi", href: "#achievement" },
+      { label: "Tentang Saya", href: "#about" },
     ],
   },
 
   // 2. HERO SECTION
   hero: {
-    badgeText: "Software Engineering Technology — IPB University",
-    badgeAvatar: "/potogue.png",
-    greeting: "I'm",
+    greeting: "Saya",
     fullName: "Rifaldi Valoza",
-    role: "Web Developer",
+    role: "Front End Developer",
     portraitImage: "/potogue.png",
-    primaryButton: {
-      text: "Portfolio",
-      href: "#projects",
-    },
-    secondaryButton: {
-      text: "Hire Me",
-      href: "#contact",
-    },
     quote:
-      "Software Engineering Technology Student at IPB University — Passionate about Web Development & Graphic Design!",
-    reviews: {
-      countText: "5+ Years",
-      ratingText: "(2021 - Present)",
-      subText: "Freelance & Leadership Experience",
-      avatars: [],
-    },
+      "Mahasiswa Teknologi Rekayasa Perangkat Lunak di IPB University — Punya passion besar di Front End Development & UI/UX!",
     socials: [
       {
         name: "Facebook",
@@ -64,258 +46,251 @@ export const portfolioData = {
         url: "https://www.instagram.com/valozza_?obrf=eTlrYmZ1ZGYzM2R3",
       },
     ],
-    // Skills from CV
     floatingSkills: [
       { label: "React.js", variant: "dark" },
-      { label: "Laravel", variant: "orange" },
+      { label: "Next.js", variant: "orange" },
+      { label: "Laravel", variant: "dark" },
       { label: "Tailwind CSS", variant: "dark" },
-      { label: "Figma", variant: "dark" },
-      { label: "CorelDraw", variant: "orange" },
-      { label: "Canva", variant: "dark" },
+      { label: "Figma", variant: "orange" },
+      { label: "CorelDraw", variant: "dark" },
     ],
   },
 
-  // 3. MARQUEE BANNER (SKILLS & COMPETENCIES FROM CV)
+  // 3. MARQUEE BANNER
   marqueeItems: [
     "React.js",
+    "Next.js",
     "Laravel",
     "Tailwind CSS",
     "Figma",
     "CorelDraw",
-    "Canva",
-    "Microsoft Office",
-    "Web Development",
-    "Graphic Design",
+    "Front End Development",
+    "UI/UX Design",
   ],
 
-  // 4. SERVICES SECTION (BASED ON CV SKILLS & EXPERIENCE)
+  // 4. SERVICES SECTION
   servicesSection: {
-    subtitle: "My Services",
-    titlePrefix: "How I Bring",
-    titleHighlight: "Ideas to Life",
-    ctaText: "View All Services",
-    ctaHref: "#contact",
+    subtitle: "Layanan Saya",
+    titlePrefix: "Cara Saya Mewujudkan",
+    titleHighlight: "Ide Menjadi Nyata",
     defaultOpenIndex: 0,
     items: [
       {
         number: "01.",
-        title: "Web Development (React.js & Laravel)",
+        title: "Pengembangan Web (React.js & Laravel)",
         tags: [
-          "React.js Frontend",
-          "Laravel Full-Stack",
+          "Frontend React.js",
+          "Next.js",
+          "Full-Stack Laravel",
           "Tailwind CSS",
-          "Responsive Web Apps",
+          "Web App Responsif",
         ],
         description:
-          "Developing modern, fast, and responsive websites and web applications powered by React.js, Laravel, and Tailwind CSS.",
+          "Membangun website dan aplikasi web modern yang cepat dan responsif dengan React.js, Laravel, dan Tailwind CSS.",
         href: "#contact",
       },
       {
         number: "02.",
-        title: "UI/UX & Website Design",
+        title: "Desain UI/UX & Website",
         tags: [
-          "Figma Prototyping",
+          "Prototyping Figma",
           "Wireframing",
-          "Landing Page UI",
-          "Interactive Design",
+          "UI Landing Page",
+          "Desain Interaktif",
         ],
         description:
-          "Designing intuitive, user-friendly, and visually compelling web and mobile interfaces structured cleanly in Figma.",
+          "Merancang antarmuka web dan mobile yang intuitif, ramah pengguna, dan menarik secara visual — tersusun rapi di Figma.",
         href: "#contact",
       },
       {
         number: "03.",
-        title: "Graphic & Social Media Design",
+        title: "Desain Grafis & Media Sosial",
         tags: [
-          "Social Media Design",
-          "Infographics",
-          "CorelDraw & Canva",
-          "Visual Branding",
+          "Desain Media Sosial",
+          "Infografis",
+          "CorelDraw",
+          "Branding Visual",
         ],
         description:
-          "Crafting impactful visual branding, infographics, and social media campaigns for institutions and brands including IPB University and Makpanen Indonesia.",
+          "Membuat branding visual, infografis, dan kampanye media sosial yang berdampak untuk institusi dan brand, termasuk IPB University dan Makpanen Indonesia.",
         href: "#contact",
       },
       {
         number: "04.",
-        title: "Animation & Creative Content",
+        title: "Animasi & Konten Kreatif",
         tags: [
-          "2D Animation",
+          "Animasi 2D",
           "Motion Graphics",
-          "Digital Campaigns",
-          "Canva Mentoring",
+          "Kampanye Digital",
+          "Motion Design",
         ],
         description:
-          "Producing engaging animated visuals and creative assets, backed by hands-on experience as an Animator at the Ministry of Tourism and Creative Economy RI.",
+          "Memproduksi visual animasi dan aset kreatif yang menarik, didukung pengalaman langsung sebagai Animator di Kementerian Pariwisata dan Ekonomi Kreatif RI.",
         href: "#contact",
       },
       {
         number: "05.",
-        title: "IT Support & Computer Networking",
+        title: "IT Support & Jaringan Komputer",
         tags: [
-          "BNSP Level II Certified",
-          "IT Troubleshooting",
-          "System Maintenance",
-          "Microsoft Office",
+          "Tersertifikasi BNSP Level II",
+          "Troubleshooting IT",
+          "Perawatan Sistem",
         ],
         description:
-          "BNSP Level II certified in Computer and Network Engineering with practical experience as an IT Support Specialist at DPRD West Java Province.",
+          "Tersertifikasi BNSP Level II bidang Teknik Komputer dan Jaringan dengan pengalaman praktis sebagai IT Support Specialist di DPRD Provinsi Jawa Barat.",
         href: "#contact",
       },
     ],
   },
 
-  // 5. ABOUT ME SECTION (ENGLISH TRANSLATION OF CV PROFILE)
+  // 5. ABOUT ME SECTION
   about: {
-    subtitle: "About Me",
-    titlePrefix: "Who is",
+    subtitle: "Tentang Saya",
+    titlePrefix: "Siapa itu",
     titleHighlight: "Rifaldi Valoza?",
     description:
-      "Hey there, I'm Rifaldi Valoza — a 5th-semester Software Engineering Technology student at IPB University with a strong passion for software development and visual design.",
+      "Halo, saya Rifaldi Valoza — mahasiswa semester 5 Teknologi Rekayasa Perangkat Lunak di IPB University dengan passion besar di pengembangan software dan desain visual.",
     secondaryDescription:
-      "Backed by extensive leadership and freelance experience since 2021 across IPB University, the Ministry of Tourism & Creative Economy RI, and creative agencies, I bring effective problem-solving skills, strong team collaboration, and high dedication to delivering impactful digital solutions.",
-    image: "/potogue.png",
+      "Didukung pengalaman kepemimpinan dan freelance sejak 2021 di IPB University, Kementerian Pariwisata & Ekonomi Kreatif RI, serta berbagai agensi kreatif, saya membawa kemampuan problem-solving yang efektif, kolaborasi tim yang kuat, dan dedikasi tinggi untuk menghadirkan solusi digital yang berdampak.",
+    image: "/foto-about.jpeg",
     floatingTags: [
       { label: "React.js & Laravel", variant: "dark" },
       { label: "UI/UX & Figma", variant: "dark" },
-      { label: "Graphic Design", variant: "orange" },
+      { label: "Next.js", variant: "orange" },
     ],
     stats: [
-      { value: "5+", label: "Years of Experience" },
-      { value: "6+", label: "Industry & Freelance Roles" },
-      { value: "3x", label: "National Award Winner" },
+      { value: 5, suffix: "+", label: "Tahun Pengalaman" },
+      { value: 6, suffix: "+", label: "Peran Industri & Freelance" },
+      { value: 3, suffix: "x", label: "Juara Kompetisi Nasional" },
     ],
-    cvButtonText: "Download CV",
+    cvButtonText: "Unduh CV",
     cvUrl: "/CV-Rifaldi-Valoza.pdf",
   },
 
   // 6. PROJECTS / PORTFOLIO SECTION
   projectsSection: {
-    subtitle: "My Portfolio",
-    titlePrefix: "Featured",
-    titleHighlight: "Recent Projects",
-    categories: ["All", "Web Development", "UI/UX & AR", "E-Commerce"],
+    subtitle: "Portofolio Saya",
+    titlePrefix: "Proyek",
+    titleHighlight: "Terbaru Unggulan",
+    categories: ["Semua", "Pengembangan Web", "UI/UX & AR", "E-Commerce"],
     items: [
       {
         id: 1,
         title:
-          "Web-Based Financial Management Information System — CV. Muda Kita Indonesia",
+          "Sistem Informasi Manajemen Keuangan Berbasis Web — CV. Muda Kita Indonesia",
         year: "2026",
-        category: "Web Development",
-        filterCategories: ["Web Development"],
+        category: "Pengembangan Web",
+        filterCategories: ["Pengembangan Web"],
         tags: [
-          "Web Information System",
-          "Project Management",
-          "Requirements Engineering",
+          "Sistem Informasi Web",
+          "Manajemen Proyek",
+          "Rekayasa Kebutuhan",
           "2026",
         ],
         image: "/project-mudain.jpg",
         description:
-          "Led project management from initiation to completion to ensure the web-based financial management information system was delivered on time and aligned with client business processes, acting as the primary bridge between developers and stakeholders for software requirements engineering.",
+          "Memimpin manajemen proyek dari inisiasi hingga selesai untuk memastikan sistem informasi manajemen keuangan berbasis web terselesaikan tepat waktu dan sesuai proses bisnis klien, menjadi jembatan utama antara developer dan stakeholder dalam rekayasa kebutuhan software.",
         liveUrl: "https://github.com/daffaarrasyid/mudain-project",
       },
       {
         id: 2,
         title:
-          "BUDAYA.ID — Augmented Reality (AR) Cultural Learning Application",
+          "BUDAYA.ID — Aplikasi Pembelajaran Budaya Berbasis Augmented Reality (AR)",
         year: "2026",
         category: "UI/UX & AR",
-        filterCategories: ["Web Development", "UI/UX & AR"],
-        tags: ["Figma UI/UX", "Unity 3D & AR", "Marker Tracking", "2026"],
+        filterCategories: ["Pengembangan Web", "UI/UX & AR"],
+        tags: ["UI/UX Figma", "Unity 3D & AR", "Marker Tracking", "2026"],
         image: "/project-budayaid.jpg",
         description:
-          "Comprehensively designed the visual user interface in Figma—covering user flows, wireframes, and high-fidelity prototypes—and developed integrated Augmented Reality (AR) features in Unity with 3D asset modeling and marker tracking to digitize Indonesian culture for Gen Z.",
+          "Merancang antarmuka pengguna secara menyeluruh di Figma — mulai dari user flow, wireframe, hingga prototype high-fidelity — serta mengembangkan fitur Augmented Reality (AR) terintegrasi di Unity dengan pemodelan aset 3D dan marker tracking untuk mendigitalkan budaya Indonesia bagi Gen Z.",
         liveUrl: "https://github.com/rival2875/budaya-id",
       },
       {
         id: 3,
         title:
-          "Promotional Website for Plant Breeding & Seed Technology (PTB) — SV IPB University",
+          "Website Promosi Pemuliaan Tanaman & Teknologi Benih (PTB) — SV IPB University",
         year: "2025",
-        category: "Web Development",
-        filterCategories: ["Web Development", "UI/UX & AR"],
+        category: "Pengembangan Web",
+        filterCategories: ["Pengembangan Web", "UI/UX & AR"],
         tags: [
           "Front-End & Back-End",
-          "Responsive UI/UX",
+          "UI/UX Responsif",
           "SV IPB University",
           "2025",
         ],
         image: "/project-ptb.png",
         description:
-          "Designed and built the front-end and back-end web architecture for the Plant Breeding and Seed Technology (PTB) study program at the Vocational School of IPB University, delivering a responsive and interactive UI/UX across desktop and mobile devices.",
+          "Merancang dan membangun arsitektur web front-end dan back-end untuk program studi Pemuliaan Tanaman dan Teknologi Benih (PTB) Sekolah Vokasi IPB University, menghadirkan UI/UX yang responsif dan interaktif di perangkat desktop maupun mobile.",
         liveUrl: "https://github.com/rival2875",
       },
       {
         id: 4,
         title:
-          "Valoza Store — Web E-Commerce & Operational Supply Chain Infrastructure",
+          "Valoza Store — E-Commerce Web & Infrastruktur Rantai Pasok Operasional",
         year: "2024",
-        category: "Web Development",
-        filterCategories: ["Web Development", "E-Commerce"],
+        category: "Pengembangan Web",
+        filterCategories: ["Pengembangan Web", "E-Commerce"],
         tags: [
-          "Web E-Commerce",
-          "Supply Chain Management",
-          "Business Workflow",
+          "E-Commerce Web",
+          "Manajemen Rantai Pasok",
+          "Alur Bisnis",
           "2024",
         ],
         image: "/project-valozastore.png",
         description:
-          "Built, operated, and managed an independent web e-commerce platform for digital printing and merchandise production, engineering end-to-end digital business workflows from client specification gathering and inventory management to product distribution.",
+          "Membangun, mengoperasikan, dan mengelola platform e-commerce web mandiri untuk produksi digital printing dan merchandise, merekayasa alur bisnis digital end-to-end mulai dari pengumpulan spesifikasi klien, manajemen inventori, hingga distribusi produk.",
         liveUrl: "https://github.com/rival2875",
       },
     ],
   },
 
-  // 7. BLOGS / ACHIEVEMENTS SECTION
+  // 7. PRESTASI / PENGHARGAAN
   blogsSection: {
-    subtitle: "Achievements & Highlights",
-    titlePrefix: "Honors &",
-    titleHighlight: "Awards",
+    subtitle: "Prestasi & Pencapaian",
+    titlePrefix: "Penghargaan &",
+    titleHighlight: "Prestasi",
     items: [
       {
         id: 1,
-        date: "October 2026",
+        date: "Oktober 2026",
         readTime: "SV IPB University",
-        category: "1st Place Winner",
-        title: "1st Place in Infographic Competition — Agridation 2026 at SV IPB University",
-        image:
-          "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=800&auto=format&fit=crop&q=80",
-        url: "#about",
+        category: "Juara 1",
+        title:
+          "Juara 1 Lomba Infografis — Agridation 2026 di SV IPB University",
+        image: "/prestasi-infografis.jpeg",
       },
       {
         id: 2,
-        date: "March 2026",
+        date: "Maret 2026",
         readTime: "ITB Bandung",
-        category: "3rd Place Hackathon",
-        title: "3rd Place in IYREF SRE Hackathon 2026 — Bandung Institute of Technology (ITB)",
-        image:
-          "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80",
-        url: "#about",
+        category: "Juara 3 Hackathon",
+        title:
+          "Juara 3 IYREF SRE Hackathon 2026 — Institut Teknologi Bandung (ITB)",
+        image: "/prestasi-hackathon.jpeg",
       },
       {
         id: 3,
         date: "September 2026",
-        readTime: "Sebelas Maret University",
-        category: "3rd Place Business Plan",
-        title: "3rd Place in Business Plan Competition — Dekan Cup 2026 at Sebelas Maret University",
-        image:
-          "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&auto=format&fit=crop&q=80",
-        url: "#about",
+        readTime: "Universitas Sebelas Maret",
+        category: "Juara 3 Business Plan",
+        title:
+          "Juara 3 Lomba Business Plan — Dekan Cup 2026 di Universitas Sebelas Maret",
+        image: "/prestasi-businessplan.jpeg",
       },
     ],
   },
 
   // 8. CONTACT & FOOTER
   contact: {
-    subtitle: "Contact Me",
-    titlePrefix: "Let's Work",
-    titleHighlight: "Together!",
+    subtitle: "Hubungi Saya",
+    titlePrefix: "Ayo Kerja",
+    titleHighlight: "Bareng!",
     description:
-      "Have a project idea or looking for a Web Developer & Designer for your team? Drop a message and let's bring your vision to life.",
+      "Punya ide proyek atau lagi cari Front End Developer & Desainer untuk tim kamu? Kirim pesan dan mari wujudkan visi kamu bersama-sama.",
     email: "rifaldi2875@gmail.com",
     phone: "+62 858-8966-2159",
-    location: "Cianjur, West Java, Indonesia",
+    location: "Cianjur, Jawa Barat, Indonesia",
     linkedin: "https://www.linkedin.com/in/valoza-rifaldi-812b8a221/",
-    copyright: "© 2026 Rifaldi Valoza. All rights reserved.",
+    copyright: "© 2026 Rifaldi Valoza. Hak cipta dilindungi.",
   },
 };
